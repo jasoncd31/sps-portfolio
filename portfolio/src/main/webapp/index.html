@@ -5,45 +5,53 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlQ00Zukpq71itOD2lAJUeO0fpK58qamw"></script>
   </head>
+  <body onload="createMap();">
+    <div id="map"></div>
+  </body>
   <body>
-    <div id="content">
-      <h1>Welcome to my Portfolio!!</h1>
-      <p>The name is Jason Douglas and here is some of my stuff!</p>
+    <div id="content" >
+      <h1 id="one">Welcome to my Portfolio</h1>
+      <p>Hi, I'm Jason Douglas</p>
+      <h4>Bio:</h4>
       <p>
-        <strong>A little bit about me!</strong>
-      </p>
-      <p>
-          <b>Bio:</b>I grew up in Santa Clarita, CA which is just outside of Los Angeles. (Technically it is part of LA but if I said that,
-          everyone from LA would roast me so...) I have always really enjoyed computers and learning about them but I didn't get
+          I grew up in Santa Clarita, CA which is just outside of Los Angeles. I have always really enjoyed computers and learning about them but I didn't get
           into programming until I went to college. Before college, I did theatre at an arts high school in LA called LACHSA (Los
           Angeles County High School for the Arts). It was a lot of fun and I do enjoy acting but it also helped me realize that 
           it was not something I wanted to make a career out of. So now, I attend Loyola Marymount University as a Computer Science
           major. Fun fact, when I graduate from my undergrad, it will have been exactly 30 years since my dad graduated from LMU.
       </p>
-      <hr>
-      <p>
-          Here's a picture of my cat!
-      </p>
-      <a href="images/coco1.jpeg"><img src="images/coco1.jpeg" width = "500" height = "600"/></a>
-      <p>
-          His name is Coco! If you see a lil snot on his nose, that is because he's got allergies. I like to say he's allergic
-          to cats but I don't think he really is.
-      </p>
-      <a href="images/pandaandi.jpeg"><img src="images/pandaandi.jpeg" width = "500" height = "600"/></a>
-      <p>
-          This is a photo and my dog Panda and I. He's so sweet although I think part of the reason he likes me is because
+    </div>
+    <div id="content">
+      <div class="gallery">
+        <a target="_blank" href="images/coco1.jpeg">
+             <img src="images/coco1.jpeg"  width="500" height="600">
+        </a>
+        <div class="desc">His name is Coco! If you see a lil snot on his nose, that is because he's got allergies. I like to say he's allergic
+          to cats but I don't think he really is.</div>
+      </div>
+      <div class="gallery">
+          <a target="_blank" href="images/pandaandi.jpeg">
+            <img src="images/pandaandi.jpeg" width= "500" height="600">
+          </a>
+          <div class="desc"> This is a photo and my dog Panda and I. He's so sweet although I think part of the reason he likes me is because
           I feed him. He's also the smallest dog my family has ever had. Before him, we only had Golden Retrievers.
           Also fun fact, this is the longest my hair has ever been. I decided to not cut it until the pandemic is over
-          and here we are! 
-      </p>
-      <a href="images/chloe.jpeg"><img src="images/chloe.jpeg" width = "500" height = "600"/></a>
-      <p>
-          I think she would get mad at me if I didn't include her so here's Chloe! She's been with me for over 10 years now.
+          and here we are!  </div>
+      </div>
+      <div class="gallery">
+          <a target="_blank" href="images/chloe.jpeg">
+            <img src="images/chloe.jpeg" width= "500" height="600">
+          </a>
+          <div class="desc"> I think she would get mad at me if I didn't include her so here's Chloe! She's been with me for over 10 years now.
           I like to think that she's grown up with me. I still remember the day we adopted her. Another dog, Precious had passed
           a few months prior and our other dog at the time, Murphy was really sad. He and Precious had been together for years and
-          we also could feel this sad void. So we adopted Chloe. I love her to the moon and back.
-      </p>
+          we also could feel this sad void. So we adopted Chloe. I love her to the moon and back.  </div>
+      </div>
+    </div>
+    <div id="content">
+        <br>
       <hr>
       <p><strong>SOME JASON DOUGLAS TALENTS</strong></p>
       <p>
@@ -68,9 +76,6 @@
           find different places if they needed a certain type of help. For example, if someone needed Wifi for online schooling, they could
           choose Wifi hotspots and then search for all avaliable hotspots around them. My group and I tracked Wifi hotspots and foodbanks. I was specifically a BackEnd developer incharge of integrating
           MapBox which also meant integrating the data. 
-      </p>
-      <p>
-         Want to learn more about me? Here's my <a href="https://www.linkedin.com/in/jason-douglas-a2232b1b9/" target ="_blank">LinkedIn</a> and here's my <a href="https://github.com/jasoncd31" target ="_blank">github</a>!
       </p>
     </div>
   </body>

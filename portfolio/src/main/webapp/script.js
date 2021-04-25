@@ -23,7 +23,32 @@ function addRandomGreeting() {
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
+  const greetingContainer = document.getElementById('date-container');
   greetingContainer.innerText = greeting;
+}
+
+async function showHello() {
+  const responseFromServer = await fetch('/hello');
+  const textFromResponse = await responseFromServer.text();
+
+  const helloContainer = document.getElementById('hello-container');
+  helloContainer.innerText = textFromResponse;
+}
+
+/** Fetches the current date from the server and adds it to the page. */
+async function showServerTime() {
+  const responseFromServer = await fetch('/date');
+  const textFromResponse = await responseFromServer.text();
+
+  const dateContainer = document.getElementById('date-container');
+  dateContainer.innerText = textFromResponse;
+}
+let map;
+
+/** Creates a map and adds it to the page. */
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
 }
 
