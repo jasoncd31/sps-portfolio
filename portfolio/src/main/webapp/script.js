@@ -16,28 +16,34 @@
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
-/** Creates a chart and adds it to the page. */
+/** Fetches bigfoot sightings data and uses it to create a chart. */
 function drawChart() {
-  const data = new google.visualization.DataTable();
-  data.addColumn('string', 'Animal');
-  data.addColumn('number', 'Count');
-        data.addRows([
-          ['Lions', 10],
-          ['Tigers', 5],
-          ['Bears', 15]
+  const data = google.visualization.arrayToDataTable([
+          ['Year', 'Dog', 'Cat', 'Bird'],
+          ['2000',  68, 73, 19],
+          ['2002',  68, 77.7, 17.3],
+          ['2004',  73.9, 90.5, 16.6],
+          ['2006',  74.8, 88.3, 16],
+          ['2008', 77.5, 93.6,15],
+          ['2012', 78.2,86.4,16.2],
+          ['2014', 83.3,95.6,20.6],
+          ['2015', 77.8,85.8,14.3],
+          ['2017', 89.7,94.2,20.6]
         ]);
 
-  const options = {
-    'title': 'Zoo Animals',
-    'width':500,
-    'height':400
-  };
 
-  const chart = new google.visualization.PieChart(
-      document.getElementById('chart-container'));
+  const options = {
+          title: 'Dogs Vs Cats Vs Birds',
+          subtitle: 'in the millions',
+          legend: { position: 'bottom' },
+          height: 700
+        };
+
+
+  const chart = new google.visualization.LineChart(document.getElementById('chart-container'));
+
   chart.draw(data, options);
 }
-
 
 /**
  * Adds a random greeting to the page.
